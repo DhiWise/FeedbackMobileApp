@@ -8,6 +8,12 @@ It uses canny customer feedback APIs.
 
 Figma : https://www.figma.com/file/Vr9miNKErcYfHES47itgyd/CannyUseCase?node-id=0%3A1
 
+![Image1](https://raw.githubusercontent.com/AshutoshDaveDhiWise/flutter-canny-mobile/main/Screenshot%20from%202022-08-01%2017-48-13.png)
+![Image2](https://raw.githubusercontent.com/AshutoshDaveDhiWise/flutter-canny-mobile/main/Screenshot%20from%202022-08-01%2017-48-34.png)
+![Image3](https://raw.githubusercontent.com/AshutoshDaveDhiWise/flutter-canny-mobile/main/Screenshot%20from%202022-08-01%2017-48-50.png)
+![Image4](https://raw.githubusercontent.com/AshutoshDaveDhiWise/flutter-canny-mobile/main/Screenshot%20from%202022-08-01%2017-49-12.png)
+![Image5](https://raw.githubusercontent.com/AshutoshDaveDhiWise/flutter-canny-mobile/main/Screenshot%20from%202022-08-01%2017-49-26.png)
+
 <div>
   <h1 align="center">Getting Started with Flutter 🚀 </h1>
   <strong>

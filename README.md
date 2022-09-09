@@ -42,7 +42,7 @@ $ cd flutter-canny-mobile
 
 #### 2. Set Account Tokens In Following Files
 
-Canny - lib/core/constants/apiKeys.dart
+Create Account for Canny on https://canny.io/ and setup required keys in lib/core/constants/apiKeys.dart
 
 <div>
   <h1 align="center">Getting Started with Flutter 🚀 </h1>

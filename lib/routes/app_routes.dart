@@ -1,27 +1,20 @@
-import 'package:cannymobile/presentation/screen_four_screen/screen_four_screen.dart';
-import 'package:cannymobile/presentation/screen_four_screen/binding/screen_four_binding.dart';
-import 'package:cannymobile/presentation/screen_three_screen/screen_three_screen.dart';
-import 'package:cannymobile/presentation/screen_three_screen/binding/screen_three_binding.dart';
-import 'package:cannymobile/presentation/screen_five_screen/screen_five_screen.dart';
-import 'package:cannymobile/presentation/screen_five_screen/binding/screen_five_binding.dart';
-import 'package:cannymobile/presentation/screen_one_screen/screen_one_screen.dart';
-import 'package:cannymobile/presentation/screen_one_screen/binding/screen_one_binding.dart';
-import 'package:cannymobile/presentation/screen_two_screen/screen_two_screen.dart';
-import 'package:cannymobile/presentation/screen_two_screen/binding/screen_two_binding.dart';
+import 'package:cannymobile/presentation/feedback_create_screen/feedback_create_screen.dart';
+import 'package:cannymobile/presentation/feedback_create_screen/binding/feedback_create_binding.dart';
 import 'package:cannymobile/presentation/app_navigation_screen/app_navigation_screen.dart';
 import 'package:cannymobile/presentation/app_navigation_screen/binding/app_navigation_binding.dart';
 import 'package:get/get.dart';
 
+import '../presentation/feedback_detail_screen/binding/feedback_detail_binding.dart';
+import '../presentation/feedback_detail_screen/feedback_detail_screen.dart';
+import '../presentation/feedback_list_screen/binding/feedback_list_binding.dart';
+import '../presentation/feedback_list_screen/feedback_list_screen.dart';
+
 class AppRoutes {
   static String screenFourScreen = '/screen_four_screen';
-
-  static String screenThreeScreen = '/screen_three_screen';
 
   static String screenFiveScreen = '/screen_five_screen';
 
   static String screenOneScreen = '/screen_one_screen';
-
-  static String screenTwoScreen = '/screen_two_screen';
 
   static String appNavigationScreen = '/app_navigation_screen';
 
@@ -30,37 +23,23 @@ class AppRoutes {
   static List<GetPage> pages = [
     GetPage(
       name: screenFourScreen,
-      page: () => ScreenFourScreen(),
+      page: () => FeedbackDetailScreen(),
       bindings: [
-        ScreenFourBinding(),
-      ],
-    ),
-    GetPage(
-      name: screenThreeScreen,
-      page: () => ScreenThreeScreen(),
-      bindings: [
-        ScreenThreeBinding(),
+        FeedbackDetailBinding(),
       ],
     ),
     GetPage(
       name: screenFiveScreen,
-      page: () => ScreenFiveScreen(),
+      page: () => FeedbackCreateScreen(),
       bindings: [
-        ScreenFiveBinding(),
+        FeedbackCreateBinding(),
       ],
     ),
     GetPage(
       name: screenOneScreen,
-      page: () => ScreenOneScreen(),
+      page: () => FeedbackListScreen(),
       bindings: [
-        ScreenOneBinding(),
-      ],
-    ),
-    GetPage(
-      name: screenTwoScreen,
-      page: () => ScreenTwoScreen(),
-      bindings: [
-        ScreenTwoBinding(),
+        FeedbackListBinding(),
       ],
     ),
     GetPage(
@@ -72,9 +51,9 @@ class AppRoutes {
     ),
     GetPage(
       name: initialRoute,
-      page: () => ScreenOneScreen(),
+      page: () => FeedbackListScreen(),
       bindings: [
-        ScreenOneBinding(),
+        FeedbackListBinding(),
       ],
     )
   ];

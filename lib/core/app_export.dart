@@ -10,7 +10,6 @@ export 'package:cannymobile/theme/app_style.dart';
 export 'package:cannymobile/theme/app_decoration.dart';
 export 'package:connectivity_plus/connectivity_plus.dart';
 export 'package:cannymobile/routes/app_routes.dart';
-export 'package:cannymobile/data/models/selectionPopupModel/selection_popup_model.dart';
 export 'package:cannymobile/widgets/common_image_view.dart';
 export 'package:cannymobile/core/errors/exceptions.dart';
 export 'package:cannymobile/core/network/network_info.dart';

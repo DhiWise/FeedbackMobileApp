@@ -102,8 +102,11 @@ class FeedbackDetailScreen extends GetWidget<FeedbackDetailController> {
                                                   right: 12,
                                                   bottom: 8),
                                               child: Obx(() => Text(
-                                                  controller.screen4ModelObj
-                                                      .value.k1Txt.value,
+                                                  controller
+                                                      .feedbackDetailModelObj
+                                                      .value
+                                                      .upvoteCountTxt
+                                                      .value,
                                                   overflow:
                                                       TextOverflow.ellipsis,
                                                   textAlign: TextAlign.center,
@@ -115,8 +118,8 @@ class FeedbackDetailScreen extends GetWidget<FeedbackDetailController> {
                                     padding: getPadding(
                                         left: 16, top: 13, bottom: 13),
                                     child: Obx(() => Text(
-                                        controller.screen4ModelObj.value
-                                            .testingCounterTxt.value,
+                                        controller.feedbackDetailModelObj.value
+                                            .titleTxt.value,
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
                                         style: AppStyle.txtInterMedium18
@@ -163,8 +166,8 @@ class FeedbackDetailScreen extends GetWidget<FeedbackDetailController> {
                                     child: Padding(
                                         padding: getPadding(left: 10, top: 10),
                                         child: Obx(() => Text(
-                                            controller.screen4ModelObj.value
-                                                .needtoimproveTxt.value,
+                                            controller.feedbackDetailModelObj
+                                                .value.detailTxt.value,
                                             overflow: TextOverflow.ellipsis,
                                             textAlign: TextAlign.left,
                                             style: AppStyle.txtInterMedium14
@@ -174,11 +177,14 @@ class FeedbackDetailScreen extends GetWidget<FeedbackDetailController> {
                           alignment: Alignment.centerRight,
                           child: Padding(
                               padding: getPadding(left: 52, top: 16, right: 52),
-                              child: Obx(() => controller.screen4ModelObj.value
-                                          .imageUrl.value !=
+                              child: Obx(() => controller.feedbackDetailModelObj
+                                          .value.imageUrl.value !=
                                       ""
                                   ? Image.network(controller
-                                      .screen4ModelObj.value.imageUrl.value)
+                                      .feedbackDetailModelObj
+                                      .value
+                                      .imageUrl
+                                      .value)
                                   : Container()))),
                       Align(
                           alignment: Alignment.center,

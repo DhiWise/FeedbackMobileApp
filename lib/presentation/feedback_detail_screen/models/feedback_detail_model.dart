@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
 
 class FeedbackDetailModel {
-  Rx<String> k1Txt = Rx('');
+  Rx<String> upvoteCountTxt = Rx('');
 
-  Rx<String> testingCounterTxt = Rx('');
+  Rx<String> titleTxt = Rx('');
 
-  Rx<String> needtoimproveTxt = Rx('');
+  Rx<String> detailTxt = Rx('');
 
   Rx<String> imageUrl = Rx('');
 }

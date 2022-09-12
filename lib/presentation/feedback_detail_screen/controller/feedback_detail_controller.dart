@@ -8,7 +8,7 @@ import 'package:cannymobile/core/constants/apiKeys.dart';
 class FeedbackDetailController extends GetxController {
   var id = Get.arguments[NavigationArgs.id];
 
-  Rx<FeedbackDetailModel> screen4ModelObj = FeedbackDetailModel().obs;
+  Rx<FeedbackDetailModel> feedbackDetailModelObj = FeedbackDetailModel().obs;
 
   PostRetrieveResp postRetrieveResp = PostRetrieveResp();
 
@@ -16,7 +16,7 @@ class FeedbackDetailController extends GetxController {
   void onReady() {
     super.onReady();
     Map postRetrieveReq = {
-      'apiKey': ApiKeys.apikey,
+      'apiKey': ApiKeys.apiKey,
       'id': Get.arguments['id'].toString()
     };
     this.callCreateRetrieve(
@@ -70,12 +70,14 @@ class FeedbackDetailController extends GetxController {
   }
 
   void _onCreateRetrieveSuccess() {
-    screen4ModelObj.value.testingCounterTxt.value =
+    feedbackDetailModelObj.value.titleTxt.value =
         postRetrieveResp.title!.toString();
-    screen4ModelObj.value.needtoimproveTxt.value =
+    feedbackDetailModelObj.value.detailTxt.value =
         postRetrieveResp.details!.toString();
-    screen4ModelObj.value.k1Txt.value = postRetrieveResp.score!.toString();
-    screen4ModelObj.value.imageUrl.value = postRetrieveResp.imageURLs!.first;
+    feedbackDetailModelObj.value.upvoteCountTxt.value =
+        postRetrieveResp.score!.toString();
+    feedbackDetailModelObj.value.imageUrl.value =
+        postRetrieveResp.imageURLs!.first;
   }
 
   void _onCreateRetrieveError() {}

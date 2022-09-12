@@ -8,9 +8,7 @@ import 'package:cannymobile/core/constants/apiKeys.dart';
 import '../models/feedback_list_item_model.dart';
 
 class FeedbackListController extends GetxController {
-  Rx<FeedbackListModel> screenOneModelObj = FeedbackListModel().obs;
-
-  SelectionPopupModel? selectedDropDownValue;
+  Rx<FeedbackListModel> feedbackListModelObj = FeedbackListModel().obs;
 
   PostPostsListResp postPostsListResp = PostPostsListResp();
 
@@ -18,8 +16,8 @@ class FeedbackListController extends GetxController {
   void onReady() {
     super.onReady();
     Map postPostsListReq = {
-      'apiKey': ApiKeys.apikey,
-      'id': ApiKeys.boardid,
+      'apiKey': ApiKeys.apiKey,
+      'id': ApiKeys.boardId,
     };
     this.callCreatePostsList(
       postPostsListReq,
@@ -31,17 +29,6 @@ class FeedbackListController extends GetxController {
   @override
   void onClose() {
     super.onClose();
-  }
-
-  onSelected(dynamic value) {
-    selectedDropDownValue = value as SelectionPopupModel;
-    screenOneModelObj.value.dropdownItemList.forEach((element) {
-      element.isSelected = false;
-      if (element.id == value.id) {
-        element.isSelected = true;
-      }
-    });
-    screenOneModelObj.value.dropdownItemList.refresh();
   }
 
   void callCreatePostsList(Map req,
@@ -89,14 +76,15 @@ class FeedbackListController extends GetxController {
       for (var element in postPostsListResp.posts!) {
         var screenOneItemModel = FeedbackListItemModel();
         screenOneItemModel.id.value = element.id!.toString();
-        screenOneItemModel.testingCounterTxt.value = element.title!.toString();
-        screenOneItemModel.testingfinalTxt.value = element.details!.toString();
-        screenOneItemModel.k1Txt.value = element.score!.toString();
-        screenOneItemModel.k0Txt.value = element.commentCount!.toString();
+        screenOneItemModel.titleTxt.value = element.title!.toString();
+        screenOneItemModel.detailTxt.value = element.details!.toString();
+        screenOneItemModel.upvoteCountTxt.value = element.score!.toString();
+        screenOneItemModel.commentCountTxt.value =
+            element.commentCount!.toString();
         screenOneItemModelList.add(screenOneItemModel);
       }
     }
-    screenOneModelObj.value.screenOneItemList.value = screenOneItemModelList;
+    feedbackListModelObj.value.feedbackItemList.value = screenOneItemModelList;
   }
 
   void _onCreatePostsListError() {}

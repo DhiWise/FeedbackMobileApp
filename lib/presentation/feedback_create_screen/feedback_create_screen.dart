@@ -215,9 +215,9 @@ class FeedbackCreateScreen extends GetWidget<FeedbackCreateController> {
     PostCreateReq postCreateReq = PostCreateReq(
       title: controller.groupThirtyController.text,
       details: controller.anyadditionalController.text,
-      apiKey: ApiKeys.apikey,
-      authorID: ApiKeys.authorid,
-      boardID: ApiKeys.boardid,
+      apiKey: ApiKeys.apiKey,
+      authorID: ApiKeys.authorId,
+      boardID: ApiKeys.boardId,
     );
     controller.callCreateCreate(
       postCreateReq.toJson(),

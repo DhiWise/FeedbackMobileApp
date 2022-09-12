@@ -3,7 +3,6 @@ import 'controller/feedback_list_controller.dart';
 import 'models/feedback_list_item_model.dart';
 import 'package:cannymobile/core/app_export.dart';
 import 'package:cannymobile/widgets/custom_button.dart';
-import 'package:cannymobile/widgets/custom_drop_down.dart';
 import 'package:cannymobile/widgets/custom_icon_button.dart';
 import 'package:flutter/material.dart';
 
@@ -76,13 +75,13 @@ class FeedbackListScreen extends GetWidget<FeedbackListController> {
                               child: Obx(() => ListView.builder(
                                   physics: BouncingScrollPhysics(),
                                   shrinkWrap: true,
-                                  itemCount: controller.screenOneModelObj.value
-                                      .screenOneItemList.length,
+                                  itemCount: controller.feedbackListModelObj
+                                      .value.feedbackItemList.length,
                                   itemBuilder: (context, index) {
                                     FeedbackListItemModel model = controller
-                                        .screenOneModelObj
+                                        .feedbackListModelObj
                                         .value
-                                        .screenOneItemList[index];
+                                        .feedbackItemList[index];
                                     return FeedbackListItemWidget(model);
                                   })))),
                       Align(

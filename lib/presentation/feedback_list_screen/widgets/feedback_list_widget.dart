@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class FeedbackListItemWidget extends StatelessWidget {
-  FeedbackListItemWidget(this.listpolygon1ItemModelObj);
+  FeedbackListItemWidget(this.feedbackListItemModel);
 
-  FeedbackListItemModel listpolygon1ItemModelObj;
+  FeedbackListItemModel feedbackListItemModel;
 
   var controller = Get.find<FeedbackListController>();
 
@@ -15,7 +15,7 @@ class FeedbackListItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        onTapRowpolygon1(listpolygon1ItemModelObj.id.value);
+        onTapRowpolygon1(feedbackListItemModel.id.value);
       },
       behavior: HitTestBehavior.translucent,
       child: Align(
@@ -69,7 +69,7 @@ class FeedbackListItemWidget extends StatelessWidget {
                             ),
                             child: Obx(
                               () => Text(
-                                listpolygon1ItemModelObj.k1Txt.value,
+                                feedbackListItemModel.upvoteCountTxt.value,
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.center,
                                 style: AppStyle.txtInterMedium16.copyWith(
@@ -99,8 +99,7 @@ class FeedbackListItemWidget extends StatelessWidget {
                             ),
                             child: Obx(
                               () => Text(
-                                listpolygon1ItemModelObj
-                                    .testingCounterTxt.value,
+                                feedbackListItemModel.titleTxt.value,
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.left,
                                 style: AppStyle.txtInterMedium16.copyWith(
@@ -115,7 +114,7 @@ class FeedbackListItemWidget extends StatelessWidget {
                             ),
                             child: Obx(
                               () => Text(
-                                listpolygon1ItemModelObj.testingfinalTxt.value,
+                                feedbackListItemModel.detailTxt.value,
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.left,
                                 style:
@@ -163,7 +162,7 @@ class FeedbackListItemWidget extends StatelessWidget {
                       ),
                       child: Obx(
                         () => Text(
-                          listpolygon1ItemModelObj.k0Txt.value,
+                          feedbackListItemModel.commentCountTxt.value,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.center,
                           style: AppStyle.txtInterMedium16.copyWith(

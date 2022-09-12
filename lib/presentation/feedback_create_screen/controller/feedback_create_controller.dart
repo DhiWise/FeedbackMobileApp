@@ -11,7 +11,7 @@ class FeedbackCreateController extends GetxController {
 
   TextEditingController anyadditionalController = TextEditingController();
 
-  Rx<FeedbackCreateModel> screenFiveModelObj = FeedbackCreateModel().obs;
+  Rx<FeedbackCreateModel> feebackCreateModelObj = FeedbackCreateModel().obs;
 
   PostUploadResp postUploadResp = PostUploadResp();
 

@@ -1,7 +1,7 @@
 class ApiKeys {
-  static String apikey = "[Your Canny Api Key]";
+  static String apiKey = "[Your Canny Api Key]";
 
-  static String boardid = "[Your Board Id]";
+  static String boardId = "[Your Board Id]";
 
-  static String authorid = "[Your Author Id]";
+  static String authorId = "[Your Author Id]";
 }

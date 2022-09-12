@@ -22,9 +22,9 @@ To create a single place for all customer feedback. Required to save time managi
 5.  List of comments of Feeback
 
 # Screenshots
-![Image1](https://raw.githubusercontent.com/AshutoshDaveDhiWise/flutter-canny-mobile/main/Screenshot%20from%202022-08-01%2017-48-13.png)
-![Image2](https://raw.githubusercontent.com/AshutoshDaveDhiWise/flutter-canny-mobile/main/Screenshot%20from%202022-08-01%2017-48-34.png)
-![Image3](https://raw.githubusercontent.com/AshutoshDaveDhiWise/flutter-canny-mobile/main/Screenshot%20from%202022-08-01%2017-49-26.png)
+![FeedbackList](/preview_images/Screenshot%20from%202022-09-09%2020-15-30.png)
+![FeedbackDetail](/preview_images/Screenshot%20from%202022-09-09%2020-17-46.png)
+![FeedbackCreate](/preview_images/Screenshot%20from%202022-09-09%2023-16-04.png)
 
 # Setup
 

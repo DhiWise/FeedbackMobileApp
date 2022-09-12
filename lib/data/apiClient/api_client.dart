@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:cannymobile/core/app_export.dart';
 import 'package:cannymobile/core/utils/progress_dialog_utils.dart';
 
@@ -45,8 +47,9 @@ class ApiClient extends GetConnect {
           response.hasError ? response.statusText : 'Something Went Wrong!',
         );
       }
-    } catch (error) {
+    } catch (error, stackTrace) {
       ProgressDialogUtils.hideProgressDialog();
+      Logger.log(error, stackTrace: stackTrace);
       onError!(error);
     }
   }
@@ -114,7 +117,7 @@ class ApiClient extends GetConnect {
     try {
       await isNetworkConnected();
       Response response = await httpClient.post('$url/api/v1/posts/retrieve',
-          headers: headers, body: requestData);
+          headers: headers, body: encodedBody);
       ProgressDialogUtils.hideProgressDialog();
       if (_isSuccessCall(response)) {
         onSuccess!(response.body);
@@ -164,7 +167,7 @@ class ApiClient extends GetConnect {
     try {
       await isNetworkConnected();
       Response response = await httpClient.post('$url/api/v1/posts/list',
-          headers: headers, body: requestData);
+          headers: headers, body: encodedBody);
       ProgressDialogUtils.hideProgressDialog();
       if (_isSuccessCall(response)) {
         onSuccess!(response.body);

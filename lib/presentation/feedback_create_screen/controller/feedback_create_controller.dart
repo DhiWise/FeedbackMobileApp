@@ -1,3 +1,7 @@
+import 'dart:io';
+
+import 'package:images_picker/images_picker.dart';
+
 import '../models/feedback_create_model.dart';
 import '/core/app_export.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +16,9 @@ class FeedbackCreateController extends GetxController {
   TextEditingController anyadditionalController = TextEditingController();
 
   Rx<FeedbackCreateModel> feebackCreateModelObj = FeedbackCreateModel().obs;
+
+  Rx<File> imageFile = File("").obs;
+
 
   PostUploadResp postUploadResp = PostUploadResp();
 
@@ -32,6 +39,24 @@ class FeedbackCreateController extends GetxController {
   void callCreateUpload(FormData formData,
       {VoidCallback? successCall, VoidCallback? errCall}) async {
     return Get.find<ApiClient>().createUpload(
+        onSuccess: (resp) {
+          onCreateUploadSuccess(resp);
+          if (successCall != null) {
+            successCall();
+          }
+        },
+        onError: (err) {
+          onCreateUploadError(err);
+          if (errCall != null) {
+            errCall();
+          }
+        },
+        formData: formData);
+  }
+
+ /* void callCreateUpload(FormData formData,
+      {VoidCallback? successCall, VoidCallback? errCall}) async {
+    return Get.find<ApiClient>().createUpload(
         headers: {
           'Content-type': 'multipart/form-data',
         },
@@ -49,9 +74,11 @@ class FeedbackCreateController extends GetxController {
         },
         formData: formData);
   }
-
+*/
   void onCreateUploadSuccess(var response) {
+
     postUploadResp = PostUploadResp.fromJson(response);
+
   }
 
   void onCreateUploadError(var err) {

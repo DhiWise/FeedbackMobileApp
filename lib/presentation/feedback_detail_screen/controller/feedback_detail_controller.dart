@@ -77,7 +77,7 @@ class FeedbackDetailController extends GetxController {
     feedbackDetailModelObj.value.upvoteCountTxt.value =
         postRetrieveResp.score!.toString();
     feedbackDetailModelObj.value.imageUrl.value =
-        postRetrieveResp.imageURLs!.first;
+        postRetrieveResp.imageURLs!.first.toString();
   }
 
   void _onCreateRetrieveError() {}

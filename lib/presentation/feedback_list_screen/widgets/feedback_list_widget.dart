@@ -26,11 +26,11 @@ class FeedbackListItemWidget extends StatelessWidget {
             bottom: 12.0,
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                width: 300,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.max,

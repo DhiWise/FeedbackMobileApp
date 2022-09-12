@@ -41,6 +41,6 @@ final Map<String, String> enUs = {
   "lbl_comment_testing": "Comment Testing",
   "lbl_submit": "SUBMIT",
   "msg_powered_by_cann": "Powered by Canny",
-  "lbl_jast_now": "Jast Now",
+  "lbl_jast_now": "Just Now",
   "lbl_details2": "Any additional details..."
 };

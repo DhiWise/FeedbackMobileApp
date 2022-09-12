@@ -87,8 +87,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_screen_four"
-                                                                      .tr,
+                                                                  "feedback detail",
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -138,8 +137,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_screen_five"
-                                                                      .tr,
+                                                                  "feedback create",
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -189,8 +187,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_screen_one"
-                                                                      .tr,
+                                                                  "feedback list",
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,

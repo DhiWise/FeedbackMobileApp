@@ -30,8 +30,8 @@ To create a single place for all customer feedback. Required to save time managi
 
 #### 1. Clone the repository
 ```sh
-$ git clone https://github.com/.....
-$ cd flutter-canny-mobile
+$ git clone https://github.com/DhiWise/FeedbackMobileApp
+$ cd FeedbackMobileApp
 ```
 ## Install Dependencies
 
